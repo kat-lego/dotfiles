@@ -1,0 +1,39 @@
+[core]
+    editor = nvim
+    excludesfile = false
+    autocrlf = false
+
+[user]
+    name = kat-lego
+    email = katlegomodupi@protonmail.com
+
+[alias]
+    # git checkout
+    co = "!git checkout" 
+
+    # git status
+    st = "!git status" 
+
+    # Get the current branch name (not so useful in itself, but used in
+    # other aliases)
+    branch-name = "!git rev-parse --abbrev-ref HEAD"
+
+    # soft reset
+    undo = "!git reset --soft HEAD^"
+
+    # merge from main
+    pullo = "!git pull origin main"
+
+    # Push the current branch to the remote "origin", and set it to track
+    # the upstream branch
+    publish = "!git push -u origin $(git branch-name)"
+
+    # Delete any branches that have been merged into master
+    # See also: https://gist.github.com/robmiller/5133264
+    delete-merged-branches = "!git checkout main && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+[pull]
+    rebase = false
+
+[init]
+    defaultBranch = main
