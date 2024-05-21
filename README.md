@@ -34,10 +34,30 @@ $ stow .
 ```
 
 ## References
-- [Stow has forever changed the way I manage my dotfiles] (https://www.youtube.com/watch?v=y6XCebnB9gs)
+- [Stow has forever changed the way I manage my dotfiles](https://www.youtube.com/watch?v=y6XCebnB9gs)
 
 # TMUX config
 
 Information about the tmux configuration
 
 ## Requirements
+
+Ensure you have the following installed on your system
+
+### Tmux
+
+```
+sudo apt install tmux
+```
+
+### Tmux plugin manager
+
+Clone TPM
+
+```
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+Make sure to install the configured plugins using `prefix + I`
+
+## References
+
