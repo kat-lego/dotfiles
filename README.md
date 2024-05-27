@@ -59,5 +59,8 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 ```
 Make sure to install the configured plugins using `prefix + I`
 
-## References
+
+# TMUXifier config
+
+Information about the tmuxifier configuration
 

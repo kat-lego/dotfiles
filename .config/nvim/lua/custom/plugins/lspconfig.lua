@@ -149,7 +149,13 @@ return { -- LSP Configuration & Plugins
         filetypes = { 'bicep' },
       },
 
-      tsserver = {},
+      tsserver = {
+        init_options = {
+          preferences = {
+            disableSuggestions = true
+          }
+        }
+      },
       eslint = {},
     }
 

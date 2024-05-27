@@ -1,7 +1,9 @@
 return {
   'vim-test/vim-test',
   lazy = false,
-  dependancies = {},
+  dependencies = {
+    'preservim/vimux',
+  },
   config = function()
     vim.g['test#csharp#runner'] = 'dotnettest'
     vim.g['test#strategy'] = 'vimux'

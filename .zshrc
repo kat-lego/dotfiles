@@ -90,6 +90,7 @@ alias lg=lazygit
 # tmuxifier
 export PATH="$PATH:/home/katlego/programs/tmuxifier/bin"
 eval "$(tmuxifier init -)"
+alias tmuxf=tmuxifier 
 
 # brew
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"

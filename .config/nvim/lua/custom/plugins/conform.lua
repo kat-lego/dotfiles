@@ -13,7 +13,8 @@ return { -- Autoformat
 
       -- You can use a sub-list to tell conform to run *until* a formatter
       -- is found.
-      javascript = { { 'prettierd', 'prettier' } },
+      -- javascript = { { 'prettierd', 'prettier' } },
+      javascript = { 'deno_fmt' },
       typescript = { 'deno_fmt' },
       json = { 'deno_fmt' },
       csharp = { 'csharpier' },

@@ -24,5 +24,8 @@ return {
         },
       }
     end
+
+    vim.keymap.set('n', '<leader>db', '<cmd>DapToggleBreakpoint<cr>', { noremap = true, desc = 'Add breakpoint at line' })
+    vim.keymap.set('n', '<leader>dr', '<cmd>DapContinue<cr>', { noremap = true, desc = 'Run or continue the debugger' })
   end,
 }
