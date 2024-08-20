@@ -114,3 +114,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # autojump
 . /usr/share/autojump/autojump.sh
+
+# golang
+export PATH="$PATH:/home/katlego/go/bin"
+
+# lazygit
+alias lg=lazygit

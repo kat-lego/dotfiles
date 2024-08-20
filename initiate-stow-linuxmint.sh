@@ -116,4 +116,11 @@ npm install -g neovim
 
 echo ""
 
+##################################
+echo "###################"
+echo "# install lazygit #"
+echo "###################"
+go install github.com/jesseduffield/lazygit@latest
+
+echo ""
 
