@@ -8,13 +8,8 @@ return { -- Autoformat
     },
     formatters_by_ft = {
       lua = { 'stylua' },
-      python = { 'isort', 'black' },
-      javascript = { 'deno_fmt' },
-      typescript = { 'deno_fmt' },
       json = { 'deno_fmt' },
-      csharp = { 'csharpier' },
       bash = { 'shfmt' },
-      bicep = { 'bicep' },
     },
   },
 }

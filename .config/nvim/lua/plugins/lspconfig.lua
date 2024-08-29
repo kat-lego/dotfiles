@@ -55,21 +55,11 @@ return { -- LSP Configuration & Plugins
     vim.cmd [[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]]
 
     local servers = {
-      pyright = {},
-
-      bicep = {},
-
       tsserver = {},
-
-      eslint = {},
 
       bashls = {},
 
       marksman = {},
-
-      jsonls = {},
-
-      gopls = {},
 
       lua_ls = {
         settings = {
@@ -92,14 +82,14 @@ return { -- LSP Configuration & Plugins
 
     require('mason').setup()
 
-    local ensure_installed = vim.tbl_keys(servers or {})
-    vim.list_extend(ensure_installed, {
-      'stylua',
-      'black',
-      'isort',
-      'csharpier',
-      'deno',
-    })
+  --   local ensure_installed = vim.tbl_keys(servers or {})
+  --   vim.list_extend(ensure_installed, {
+  --     -- 'stylua',
+  --     -- 'black',
+  --     -- 'isort',
+  --     -- 'csharpier',
+  --     -- 'deno',
+  --   })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {

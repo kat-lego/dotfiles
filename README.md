@@ -7,3 +7,4 @@
 
 ## TODO
 * setup git aliases on git config
+
