@@ -1,0 +1,23 @@
+[core]
+    editor = nvim
+    excludesfile = false
+    autocrlf = false
+
+[user]
+    name = <replace>
+    email = <replace>
+
+[alias]
+    co = "!git checkout"
+    st = "!git status"
+    branch-name = "!git rev-parse --abbrev-ref HEAD"
+    undo = "!git reset --soft HEAD^"
+    pullo = "git pull origin main"
+    publish = "!git pull -u origin $(git branch-name)"
+    delete-merged-branches = "!git checkout main && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d"
+
+[pull]
+    rebase = false
+
+[init]
+    defaultBranch = main

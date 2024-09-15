@@ -22,4 +22,5 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-initiate-stow-linuxmint.sh
+istow.sh
+.gitconfig.template
