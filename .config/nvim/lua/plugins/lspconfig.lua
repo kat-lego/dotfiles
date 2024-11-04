@@ -61,6 +61,8 @@ return { -- LSP Configuration & Plugins
 
       marksman = {},
 
+      jsonls = {},
+
       lua_ls = {
         settings = {
           Lua = {
@@ -82,14 +84,13 @@ return { -- LSP Configuration & Plugins
 
     require('mason').setup()
 
-  --   local ensure_installed = vim.tbl_keys(servers or {})
-  --   vim.list_extend(ensure_installed, {
-  --     -- 'stylua',
-  --     -- 'black',
-  --     -- 'isort',
-  --     -- 'csharpier',
-  --     -- 'deno',
-  --   })
+    local ensure_installed = vim.tbl_keys(servers or {})
+    vim.list_extend(ensure_installed, {
+      'stylua',
+      'black',
+      'isort',
+      'csharpier',
+    })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {

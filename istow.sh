@@ -17,6 +17,7 @@ sudo apt install -y \
     gcc \
     default-jdk \
     python3-pip \
+    python3.10-venv \ # may need a different version depending on the python version installed
     dotnet-sdk-8.0 \
     hugo \
 

@@ -8,7 +8,6 @@ return { -- Autoformat
     },
     formatters_by_ft = {
       lua = { 'stylua' },
-      json = { 'deno_fmt' },
       bash = { 'shfmt' },
     },
   },

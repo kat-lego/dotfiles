@@ -1,6 +1,6 @@
 return {
-  dir = "~/source/nugetlsp-nvim",
+  dir = '~/source/nugetlsp-nvim',
   config = function()
     require('nugetlsp-nvim').setup()
-  end
+  end,
 }
