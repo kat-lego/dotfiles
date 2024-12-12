@@ -1,2 +1,4 @@
 .config/go/telemetry/local
 .config/lazygit
+.config/configstore
+.config/firebase

@@ -124,3 +124,7 @@ export PATH="$PATH:/home/katlego/go/bin"
 
 # lazygit
 alias lg=lazygit
+
+
+# Load Angular CLI autocompletion.
+source <(ng completion script)

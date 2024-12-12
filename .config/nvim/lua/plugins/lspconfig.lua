@@ -55,6 +55,15 @@ return { -- LSP Configuration & Plugins
     vim.cmd [[ autocmd BufNewFile,BufRead *.bicep set filetype=bicep ]]
 
     local servers = {
+
+      omnisharp = {
+        settings = {
+          RoslynExtensionsOptions = {
+            EnableDecompilationSupport = true,
+          },
+        },
+      },
+
       tsserver = {},
 
       bashls = {},
