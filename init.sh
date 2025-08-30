@@ -10,15 +10,12 @@ sudo apt install -y \
     stow \
     tmux \
     curl \
+    wget \
     xclip \
     autojump \
     ripgrep \
     unzip \
     gcc \
-    default-jdk \
-    python3-pip \
-    python3.10-venv \ # may need a different version depending on the python version installed
-    dotnet-sdk-8.0 \
     hugo \
 
 echo ""
@@ -53,7 +50,7 @@ echo "################"
 echo "# Install nvim #"
 echo "################"
 
-NVIM_RELEASE_URL="https://github.com/neovim/neovim/releases/download/v0.10.1/nvim-linux64.tar.gz"
+NVIM_RELEASE_URL="https://github.com/neovim/neovim/releases/download/v0.11.3/nvim-linux-x86_64.tar.gz"
 TEMP_DIR=$(mktemp -d)
 TAR_FILE="$TEMP_DIR/nvim.tar.gz"
 EXTRACT_DIR="$TEMP_DIR/nvim-linux64"
@@ -62,19 +59,19 @@ NVIM_DIR="$INSTALL_DIR/nvim"
 
 if [ ! -d "$NVIM_DIR" ]; then
 
-    echo "Downloading Neovim..."
-    curl -L -o "$TAR_FILE" "$NVIM_RELEASE_URL"
+   echo "Downloading Neovim..."
+   wget "$NVIM_RELEASE_URL" -O "$TAR_FILE" -nv
 
-    echo "Extracting the file..."
-    mkdir -p "$EXTRACT_DIR"
-    tar -xzf "$TAR_FILE" -C "$EXTRACT_DIR"
+   echo "Extracting the file..."
+   mkdir -p "$EXTRACT_DIR"
+   tar -xzf "$TAR_FILE" -C "$EXTRACT_DIR"
 
-    echo "Install to /home/katlego/programs"
-    mkdir -p $INSTALL_DIR
-    mv "$EXTRACT_DIR/nvim-linux64" "$INSTALL_DIR/nvim"
+   echo "Install to /home/katlego/programs"
+   mkdir -p $INSTALL_DIR
+   mv "$EXTRACT_DIR/nvim-linux-x86_64" "$INSTALL_DIR/nvim"
 
-    echo "Cleaning up..."
-    rm -rf "$TEMP_DIR"
+   echo "Cleaning up..."
+   rm -rf "$TEMP_DIR"
 else
     echo "nvim dir already exists"
 fi
@@ -87,38 +84,7 @@ echo "# Run stow #"
 echo "############"
 
 stow .
-echo ""
-
-
-echo "#############"
-echo "# Oh my zsh #"
-echo "#############"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-echo ""
-
-
-echo "###########"
-echo "# rust up #"
-echo "###########"
-
-if command -v rustc &> /dev/null
-then
-    echo "Rust is installed."
-    rustc --version
-else
-    curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
-fi
-
-echo ""
-
-
-echo "#############################"
-echo "# install node 20 using nvm #"
-echo "#############################"
-
-# curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
-# nvm install 20
-
+echo "stowed"
 echo ""
 
 
@@ -144,7 +110,6 @@ else
 
     echo "Cleaning up..."
     rm -rf "$GO_TEMP_DIR"
-
 fi
 
 echo ""
@@ -155,5 +120,22 @@ echo "# install lazygit #"
 echo "###################"
 
 go install github.com/jesseduffield/lazygit@latest
+
+echo ""
+
+
+echo "#############"
+echo "# Oh my zsh #"
+echo "#############"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+echo ""
+
+
+echo "#############################"
+echo "# install node 20 using nvm #"
+echo "#############################"
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+nvm install 20
 
 echo ""

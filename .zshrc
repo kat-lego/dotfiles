@@ -106,6 +106,9 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR='nvim'
 export VISUAL='nvim'
 
+# variables
+export WINHOME="/mnt/c/Users/katlego"
+
 # nvim
 export PATH="$PATH:/home/katlego/programs/nvim/bin"
 alias vi=nvim
@@ -121,10 +124,7 @@ export NVM_DIR="$HOME/.nvm"
 # golang
 export PATH="$PATH:/usr/local/go/bin"
 export PATH="$PATH:/home/katlego/go/bin"
+export PATH="$PATH:/home/katlego/programs/wingo"
 
 # lazygit
 alias lg=lazygit
-
-
-# Load Angular CLI autocompletion.
-source <(ng completion script)

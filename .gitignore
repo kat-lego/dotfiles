@@ -2,3 +2,4 @@
 .config/lazygit
 .config/configstore
 .config/firebase
+.config/nvim/spell
