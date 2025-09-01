@@ -9,6 +9,7 @@ return { -- Autoformat
     formatters_by_ft = {
       lua = { 'stylua' },
       bash = { 'shfmt' },
+      go = { 'gofumpt', 'goimports', 'golines' },
     },
   },
 }

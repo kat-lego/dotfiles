@@ -22,5 +22,5 @@ _darcs
 ^/LICENSE.*
 ^/COPYING
 
-istow.sh
+init.sh
 .gitconfig.template

@@ -1,5 +1,7 @@
-.config/go/telemetry/local
-.config/lazygit
-.config/configstore
-.config/firebase
+
+# ignore everything in config
+.config/*
+
+# nvim config
+!.config/nvim/
 .config/nvim/spell
