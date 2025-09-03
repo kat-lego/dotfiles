@@ -128,3 +128,7 @@ alias lg=lazygit
 # dotnet
 export PATH="$PATH:/home/katlego/programs/Microsoft.CodeAnalysis.LanguageServer/content/LanguageServer/linux-x64"
 export PATH="$PATH:/home/katlego/.dotnet/tools"
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
