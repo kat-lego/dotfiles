@@ -143,6 +143,9 @@ return {
           },
         },
         jsonls = {},
+        ts_ls = {},
+        bashls = {},
+        gopls = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -158,7 +161,6 @@ return {
           function(server_name)
             local server = servers[server_name] or {}
             server.capabilities = vim.tbl_deep_extend('force', {}, capabilities, server.capabilities or {})
-            -- require('lspconfig')[server_name].setup(server)
             vim.lsp.config(server_name, server)
           end,
         },
