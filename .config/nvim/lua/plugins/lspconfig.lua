@@ -146,6 +146,7 @@ return {
         ts_ls = {},
         bashls = {},
         gopls = {},
+        pyright = {},
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
@@ -168,6 +169,7 @@ return {
 
       -- Manually installed servers
       vim.lsp.enable 'roslyn_ls'
+      vim.lsp.enable 'dartls'
     end,
   },
 }
